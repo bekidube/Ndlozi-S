@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormControl, FormGroup, NgForm,Validators } from '@angular/forms';
 import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',
@@ -12,12 +13,13 @@ export class RegisterComponent implements OnInit {
   isVisible: any;
   password: any
 
-  constructor(private http:HttpClient, private router : Router) { }
+  constructor(private userService :UserService ,private http:HttpClient, private router : Router) { }
 
   ngOnInit(): void {
   }
 
   onRegister(data:any){
+    this.userService.login()
    
     console.log(data)
    //Add the User to the Database

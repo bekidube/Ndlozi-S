@@ -8,13 +8,14 @@ import { SalesComponent } from './sales/sales.component';
 import { TradestatsComponent } from './tradestats/tradestats.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { GuardService } from './guard.service';
 
 
 
 const routes: Routes = [
   {path :"",component:HomepageComponent},
-  {path :"sales",component:SalesComponent},
-  {path :"about",component:AboutComponent},
+  {path :"sales",component:SalesComponent },
+  {path :"about",component:AboutComponent },
   {path :"contact",component:ContactComponent},
   {path :"login",component:LoginComponent},
   {path :"register",component:RegisterComponent},

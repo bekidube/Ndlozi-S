@@ -37,7 +37,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
                                 </div>
-                                <input type="text" class="form-control" minlength="2" name="name" ngModel #name="ngModel" placeholder="Enter your fullname" aria-label="Username" aria-describedby="basic-addon1" required>
+                                <input type="text" class="form-control" minlength="2" name="fullname" ngModel #name="ngModel" placeholder="Enter your fullname" aria-label="Username" aria-describedby="basic-addon1" required>
                           </div>
                           <span class="help-block" *ngIf="name.errors?.['required'] && name.touched">
                             <p class="er">name is required!</p>

@@ -4,49 +4,48 @@
         <div class="col col-xl-10">
           <div class="card" >
             <div class="row g-0">
-              <div class="col-md-6 col-lg-5 d-none d-md-block">
-                <img src="http://res.cloudinary.com/dp94yvsaw/image/upload/v1670228634/Awe%20Images/y4q4ctvrm5gmksnakn2h.gif"
+              <!-- <div class="col-md-6 col-lg-5 d-none d-md-block">
+                <img src="https://time.com/nextadvisor/wp-content/uploads/2021/09/na-what-are-cyclical-stocks.jpg"
                   alt="login form" class="img-fluid"  />
-              </div>
+              </div> -->
               <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
+                  <img  class="logo" src="https://imageio.forbes.com/specials-images/imageserve/62bcbde698c96e32f370f112/Digitally-enhanced-shot-of-a-graph-showing-the-ups-and-downs-shares-on-the-stock/0x0.jpg?format=jpg&crop=1854,1042,x0,y0,safe&width=960">
+
   
                   <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="width: auto;">
-                        <div class="header">
+                        <!-- <div class="header">
                             <div class="circle1">
                                 <div class="circle2"></div>
                             </div>
                         
-                        </div>
-
-                      <img  class="logo" src="http://res.cloudinary.com/dp94yvsaw/image/upload/v1670228634/Awe%20Images/y4q4ctvrm5gmksnakn2h.gif">
-                           
-                    
-
-                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
+                        </div> -->
+                            
+                            <div class="input-group mb-3">
+                                <!-- <div class="input-group-prepend">
                                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                                </div>
+                                </div> -->
                                 <input type="text" class="form-control" formControlName="email" placeholder="Enter your Email" aria-label="Username" aria-describedby="basic-addon1" required>
                               </div>
                          
                       
                               <div class="input-group mb-3">
-                                <div class="input-group-prepend">
+                                <!-- <div class="input-group-prepend">
                                   <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
-                                </div>
+                                </div> -->
                                 <input type="password" class="form-control" formControlName="password" placeholder="Enter your password" aria-label="Username" aria-describedby="basic-addon1" required>
                               </div>
                         
             
             
                         <div class="pt-1 mb-4">
-                          <button class="btn"  [disabled]="!loginForm.valid"><span>Sign in</span></button>
+
+                          <button (onclick)="login()" class="btn"  [disabled]="!loginForm.valid"><span>Sign in</span></button>
                         </div>
             
                         <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
 
-                        <p class="linki" [routerLink]="['/register']" routerLinkActive="router-link-active">Sign up</p>
+                        <p class="linki" [routerLink]="['/register']" type="button" routerLinkActive="router-link-active">Sign up</p>
             
                     </form>
                 </div>

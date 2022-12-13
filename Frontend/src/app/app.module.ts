@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,10 @@ import { ContactComponent } from './contact/contact.component';
 import { TradestatsComponent } from './tradestats/tradestats.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RouterModule } from '@angular/router';
+import { GuardService } from './guard.service';
+import { UserService } from './user.service';
+
 
 
 
@@ -39,8 +43,16 @@ import { RegisterComponent } from './register/register.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    RouterModule.forRoot([
+     {path:'home',component: HomepageComponent}
+
+    ])
   ],
-  providers: [],
+  providers: [
+    GuardService,
+    UserService,
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
