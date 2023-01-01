@@ -13,13 +13,12 @@ import { GuardService } from './guard.service';
 
 
 const routes: Routes = [
-  {path :"home",component:HomepageComponent},
+  {path :"",component:HomepageComponent},
   {path :"sales",component:SalesComponent },
   {path :"about",component:AboutComponent },
   {path :"contact",component:ContactComponent},
   {path :"login",component:LoginComponent},
-  {path :"",component:RegisterComponent},
- 
+  {path :"register",component:RegisterComponent},
 
 
 
